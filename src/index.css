@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-light text-dark;
+}
+
+/* Estilos personalizados */
+.section-padding {
+  @apply py-20 px-4;
+}
+
+.container {
+  @apply max-w-6xl mx-auto;
+}
+
+@layer utilities {
+  .animate-scale-x {
+    @apply origin-left scale-x-0 animate-[scaleX_0.6s_ease-out_forwards];
+  }
+}
+
+@keyframes scaleX {
+  to {
+    transform: scaleX(1);
+  }
+}
