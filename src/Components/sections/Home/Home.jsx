@@ -25,7 +25,7 @@ export default function Home() {
         {/* Main Title with Gradient and Underline */}
         <h1 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent relative">
           Soy Diego López
-          <span className="absolute left-0 -bottom-2 w-24 h-1 bg-pink-500 rounded-full animate-scale-x"></span>
+          <span className="absolute left-0 -bottom-2 w-24 h-1 bg-accentPink rounded-full underline-animate"></span>
         </h1>
         <p className="text-lg text-gray-300 mb-6">
           Estudiante de Ciencias de la Computación en la UVG, apasionado por crear
