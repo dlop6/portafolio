@@ -1,23 +1,26 @@
-
 export const abilitiesData = [
     {
         abilitie: "Pensamiento Crítico y Resolución de Problemas",
-        description: "Me enfoco en entender a fondo los problemas antes de construir soluciones. Analizo, valido y optimizo los procesos, aplicando un enfoque pragmático y ético en cada decisión técnica.",
+        description: "Analizo sistemas y desafíos técnicos desde la raíz, conectando necesidades reales con soluciones funcionales. No improviso: valido supuestos, descompongo problemas y priorizo eficiencia sin sacrificar ética ni claridad. Mi enfoque pragmático me permite tomar decisiones sólidas incluso bajo presión.",
     },
     {
         abilitie: "Backend y APIs",
-        description: "Desarrollo de backends en TypeScript, integración de APIs REST y GraphQL, estructuración de modelos de datos y comunicación eficiente entre servicios. Experiencia con PostgreSQL, Neo4J y Docker.",
+        description: "He construido backends escalables con TypeScript, utilizando Node.js y Express. Diseño e integro APIs REST y GraphQL eficientes, estructuro bases de datos relacionales (PostgreSQL) y grafos (Neo4J), y aplico principios de arquitectura limpia. Utilizo Docker para entornos reproducibles y despliegues más ágiles.",
     },
     {
         abilitie: "Aprendizaje Continuo",
-        description: "Me mantengo aprendiendo nuevas tecnologías, lenguajes y metodologías. Me adapto con rapidez a distintos entornos y tecnologías, desde Rust hasta sistemas concurrentes en C++.",
+        description: "Me formo de forma autodidacta y estructurada en tecnologías emergentes. He incursionado en Rust, sistemas concurrentes en C++ y arquitecturas modernas de software. Disfruto entender lo que está detrás del 'cómo', y adapto mis aprendizajes a proyectos reales con rapidez y profundidad.",
     },
     {
         abilitie: "UX/UI y Experiencia de Usuario",
-        description: "Diseño de pantallas intuitivas en Bizagi Studio y desarrollo de interfaces modernas con React, Vue y HTML/CSS. Enfocado en la claridad, accesibilidad y experiencia del usuario final.",
+        description: "Diseño interfaces funcionales y centradas en el usuario utilizando React, Vue y HTML/CSS. He trabajado en la creación de pantallas para automatización de procesos en Bizagi Studio, cuidando accesibilidad, flujo visual y usabilidad desde una perspectiva técnica y humana.",
     },
     {
         abilitie: "Trabajo en Equipo y Liderazgo",
-        description: "Participación activa en proyectos colaborativos y liderazgo en organizaciones como Rotaract. Habilidad para coordinar equipos, facilitar procesos y generar ambientes positivos de trabajo.",
+        description: "Coordino equipos desde la colaboración, no desde la jerarquía. En Rotaract lideré espacios de formación y proyectos de impacto. Sé cuándo escuchar, cuándo facilitar y cuándo tomar decisiones. Mi comunicación es clara, y sé traducir lo técnico a lo humano sin perder precisión.",
+    },
+    {
+        abilitie: "Modelado y Optimización de Procesos (BPMN)",
+        description: "Diseño flujos empresariales complejos en BPMN 2.0 usando Bizagi Studio, desde la identificación de actores y reglas de negocio hasta la implementación automatizada de procesos. Tengo experiencia creando pantallas, integrando servicios API externos, validando formularios y ajustando lógica de negocio según casos reales.",
     }
 ];

@@ -3,73 +3,72 @@ import { Link } from 'react-scroll';
 
 export default function Home() {
   return (
-    <section className="relative bg-black text-white min-h-[calc(100vh-64px)] flex flex-col items-center justify-center overflow-hidden px-6">
-      {/* Decorative Gradient Blobs */}
-      <div className="absolute -top-16 -left-20 w-64 h-64 bg-gradient-to-tr from-pink-500 via-purple-600 to-blue-400 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute -bottom-24 -right-32 w-96 h-96 bg-gradient-to-br from-blue-400 via-purple-600 to-pink-500 rounded-full opacity-20 animate-pulse"></div>
+    <section className="relative bg-neutralBlack text-white min-h-[calc(100vh-64px)] flex flex-col items-center justify-center overflow-hidden px-6 font-mono">
+      {/* Scanline overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'repeating-linear-gradient(0deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05) 1px, transparent 1px, transparent 2px)',
+        }}
+      />
+
+      {/* para que se mire retro */}
+      <div className="absolute -top-16 -left-20 w-64 h-64 bg-primaryMid opacity-25 rounded-sm blur-sm -z-10 animate-blob-pulse" />
+      <div className="absolute -bottom-24 -right-32 w-96 h-96 bg-primaryStart opacity-20 rounded-sm blur-sm -z-10 animate-blob-pulse" />
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
-        {/* Stylized Logo Container */}
+        {/* Logo Container (pixel frame) */}
         <div className="relative mb-8">
-          <div className="bg-white rounded-full p-6 flex items-center justify-center shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-700">
-            <img
-              src="src/assets/react.svg"
-              alt="React Logo"
-              className="w-16 h-16"
-            />
+          <div className="bg-neutralDark border-4 border-primaryStart p-4 flex items-center justify-center shadow-[0_0_10px_#ff8c00] transform rotate-3 hover:rotate-0 transition-transform duration-700">
+            <img src="src/assets/react.svg" alt="React Logo" className="w-16 h-16" />
           </div>
           
         </div>
 
-        {/* Main Title with Gradient and Underline */}
-        <h1 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent relative">
+        {/* Title */}
+        <h1 className="text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primaryStart via-primaryMid to-primaryEnd relative py-2">
           Soy Diego López
-          <span className="absolute left-0 -bottom-2 w-24 h-1 bg-accentPink rounded-full underline-animate"></span>
+          <span className="absolute left-0 -bottom-2 w-24 h-1 bg-primaryStart rounded-sm underline-animate"></span>
         </h1>
-        <p className="text-lg text-gray-300 mb-6">
-          Estudiante de Ciencias de la Computación en la UVG, apasionado por crear
-          soluciones que impulsen la innovación y mejoren vidas.
+        <p className="text-lg text-textGray mb-6 drop-shadow-[0_0_3px_#ff8c00]">
+          Estudiante de Ciencias de la Computación en la UVG, apasionado por crear soluciones
+          al estilo retro que impulsen la innovación.
         </p>
 
         {/* Description Box */}
-        <div className="bg-gray-800 bg-opacity-60 backdrop-blur-sm p-6 rounded-2xl shadow-lg mb-8">
-          <p className="leading-relaxed">
-            Me especializo en modelado de procesos de negocio con Bizagi y en
-            desarrollo fullstack usando Kotlin, React, GraphQL, Neo4J y Rust. Mi
-            objetivo es construir sistemas escalables, eficientes y con una experiencia
-            de usuario impecable.
+        <div className="bg-neutralDark bg-opacity-80 backdrop-blur-sm p-6 rounded-xl shadow-[0_0_15px_#ff8c00] mb-8 border-2 border-primaryMid">
+          <p className="leading-relaxed text-neutralLight">
+            Especializado en modelado de procesos con Bizagi y desarrollo fullstack
+            usando Kotlin, React, GraphQL y Rust. Construyo sistemas escalables con
+            estética de display antiguo.
           </p>
         </div>
 
-        {/* Buttons */}
+        {/* Buttons (retro terminal style) */}
         <div className="flex flex-wrap justify-center gap-5">
           <Link
             to="portafolio"
             smooth={true}
             duration={500}
-            className="inline-block bg-white text-black px-6 py-2 rounded-full font-semibold hover:shadow-xl transition-shadow"
+            className="inline-block bg-neutralDark border-2 border-primaryStart text-primaryStart px-6 py-2 rounded shadow-[0_0_8px_#ff8c00] hover:bg-primaryStart hover:text-neutralBlack transition-colors"
           >
-            Ver Proyectos
+            VER PROYECTOS
           </Link>
           <Link
             to="contactame"
             smooth={true}
             duration={500}
-            className="inline-block bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-colors"
+            className="inline-block bg-primaryStart text-neutralBlack px-6 py-2 rounded shadow-[0_0_8px_#ff8c00] hover:bg-primaryMid transition-colors"
           >
-            Mi CV
+            MI CV
           </Link>
         </div>
       </div>
 
-      {/* Decorative Angled Divider at Bottom */}
+      {/* Bottom Divider (pixel style) */}
       <div className="absolute inset-x-0 bottom-0">
-        <svg
-          viewBox="0 0 100 20"
-          preserveAspectRatio="none"
-          className="w-full h-20 fill-black"
-        >
+        <svg viewBox="0 0 100 20" preserveAspectRatio="none" className="w-full h-20 fill-neutralBlack">
           <polygon points="0,20 100,0 100,20" />
         </svg>
       </div>
