@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import ProjectCard from '@/Components/ui/ProjectCard';
+import ProjectCard from '@/components/ui/ProjectCard';
 import { projectsData } from '@/data/projectsData';
 
 export default function Portfolio() {

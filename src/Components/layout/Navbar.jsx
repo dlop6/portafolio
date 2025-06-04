@@ -1,4 +1,4 @@
-// src/Components/layout/Navbar.jsx
+// src/components/layout/Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { HiMenu, HiX } from 'react-icons/hi';

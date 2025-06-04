@@ -1,6 +1,6 @@
 import React from 'react';
-import CardSection from '@/Components/ui/CardSection';
-import TerminalBadge from '@/Components/ui/TerminalBadge';
+import CardSection from '@/components/ui/CardSection';
+import TerminalBadge from '@/components/ui/TerminalBadge';
 import {
   programmingSkills,
   frameworks,

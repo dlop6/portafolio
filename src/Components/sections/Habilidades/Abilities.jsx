@@ -1,6 +1,6 @@
 import React from 'react';
 import { abilitiesData } from '@/data/abilitiesData';
-import CardSection from '@/Components/ui/CardSection';
+import CardSection from '@/components/ui/CardSection';
 
 export default function Abilities() {
   return (

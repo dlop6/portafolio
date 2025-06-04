@@ -1,4 +1,4 @@
-// src/Components/sections/Contacto/ContactameForm.jsx
+// src/components/sections/Contacto/ContactameForm.jsx
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'; // <- IMPORT CORREGIDO: debe incluir la arroba "@"
 
