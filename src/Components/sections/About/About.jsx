@@ -11,16 +11,7 @@ import {
 export default function About() {
   return (
     <section className="relative bg-neutralBlack text-white py-24 px-6">
-      {/* Decorative angle at top */}
-      <div className="absolute inset-x-0 -top-16">
-        <svg
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          className="w-full h-16 fill-neutralBlack"
-        >
-          <polygon points="0,100 100,0 100,100" />
-        </svg>
-      </div>
+
 
       <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16">
         {/* Left: Profile Card */}
@@ -42,12 +33,13 @@ export default function About() {
             title="About Me"
             colorClass="bg-clip-text text-transparent bg-gradient-to-r from-primaryStart via-primaryMid to-primaryEnd font-mono"
           >
-            <p className="text-lg leading-relaxed mb-3 font-mono text-primaryMid drop-shadow-[0_1px_0_#000]">
+            <p className="text-lg leading-relaxed mb-3 font-mono  text-gray-300">
               Soy Diego López, un Fullstack Developer de Guatemala con 3 años construyendo
               aplicaciones web y móviles. Me apasiona materializar ideas en soluciones tangibles que
               mejoren procesos y experiencias de usuario.
             </p>
-            <p className="text-lg leading-relaxed font-mono text-primaryMid drop-shadow-[0_1px_0_#000]">
+            <p className="text-lg leading-relaxed font-mono  text-gray-300">
+              Actualmente estudio Ciencias de la Computación en la UVG, donde he perfeccionado mis
               Combino herramientas low-code como Bizagi para optimizar flujos de negocio, y potentes
               tecnologías modernas como Kotlin, React, GraphQL, Neo4J y Rust para construir sistemas
               escalables. Siempre busco el balance perfecto entre rendimiento, usabilidad y estética.
@@ -100,7 +92,7 @@ export default function About() {
 
               {/* Metodologías */}
               <CardSection title="Metodologías" colorClass="text-primaryStart font-mono">
-                <ul className="list-disc list-inside space-y-2 text-neutralLight">
+                <ul className="list-disc list-inside space-y-2 text-gray-300">
                   {metodologias.map((m) => (
                     <li key={m}>{m}</li>
                   ))}
@@ -109,7 +101,7 @@ export default function About() {
 
               {/* Bases de Datos */}
               <CardSection title="Bases de Datos" colorClass="text-primaryMid font-mono">
-                <ul className="list-disc list-inside space-y-2 text-neutralLight">
+                <ul className="list-disc list-inside space-y-2 text-gray-300">
                   {basesDatos.map((db) => (
                     <li key={db}>{db}</li>
                   ))}
@@ -118,7 +110,7 @@ export default function About() {
 
               {/* Idiomas */}
               <CardSection title="Idiomas" colorClass="text-primaryEnd font-mono">
-                <ul className="list-disc list-inside space-y-2 text-neutralLight">
+                <ul className="list-disc list-inside space-y-2 text-gray-300">
                   {idiomas.map((idioma) => (
                     <li key={idioma.nombre}>
                       {idioma.nombre}{' '}
@@ -134,16 +126,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* Decorative angle at bottom */}
-      <div className="absolute inset-x-0 -bottom-16 rotate-180">
-        <svg
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          className="w-full h-16 fill-neutralBlack"
-        >
-          <polygon points="0,100 100,0 100,100" />
-        </svg>
-      </div>
     </section>
   );
 }

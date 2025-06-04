@@ -38,7 +38,7 @@ export default function Home() {
 
         {/* Description Box */}
         <div className="bg-neutralDark bg-opacity-80 backdrop-blur-sm p-6 rounded-xl shadow-[0_0_15px_#ff8c00] mb-8 border-2 border-primaryMid">
-          <p className="leading-relaxed text-neutralLight">
+          <p className="leading-relaxed text-accentAmber">
             Especializado en modelado de procesos con Bizagi y desarrollo fullstack
             usando Kotlin, React, GraphQL y Rust. Construyo sistemas escalables con
             estética de display antiguo.

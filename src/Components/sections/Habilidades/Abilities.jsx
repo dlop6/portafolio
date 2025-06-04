@@ -32,7 +32,7 @@ export default function Abilities() {
                   {abilitie}
                 </h3>
               </div>
-              <p className="text-primaryMid text-base leading-relaxed text-bg-primaryStart">
+              <p className="text-gray-300 text-base leading-relaxed text-bg-primaryStart">
                 {description}
               </p>
             </div>

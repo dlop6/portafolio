@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="w-full bg-neutralDark py-4 shadow-inner">
       <div className="container flex flex-col md:flex-row justify-between items-center">
         <p className="text-textGray mb-2 md:mb-0">
-          © 2023 - Diego López. All rights reserved.
+          © 2025 - Diego López. All rights reserved.
         </p>
         <Link
           to="home"
