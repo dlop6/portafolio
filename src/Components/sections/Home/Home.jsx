@@ -21,7 +21,7 @@ export default function Home() {
         {/* Logo Container (pixel frame) */}
         <div className="relative mb-8">
           <div className="bg-neutralDark border-4 border-primaryStart p-4 flex items-center justify-center shadow-[0_0_10px_#ff8c00] transform rotate-3 hover:rotate-0 transition-transform duration-700">
-            <img src="src/assets/react.svg" alt="React Logo" className="w-16 h-16" />
+            <img src="src/assets/code.png" alt="React Logo" className="w-16 h-16" />
           </div>
           
         </div>

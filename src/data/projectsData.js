@@ -20,5 +20,19 @@ export const projectsData = [
         image: "src/assets/componentes.png",
         technologies: ["TypeScript", "React", "GraphQL"],
         link: "https://github.com/dlop6/prestamo-componentes-electronicos"
+    },
+    {
+        title: "Weather Dashboard",
+        description: "Web app que muestra el clima actual y pronóstico usando la API de OpenWeather.",
+        image: "src/assets/weather-dashboard.png",
+        technologies: ["JavaScript", "HTML", "CSS"],
+        link: "https://github.com/example/weather-dashboard"
+    },
+    {
+        title: "Personal Blog Platform",
+        description: "Plataforma de blog personal construida con Node.js y MongoDB.",
+        image: "src/assets/blog-platform.png",
+        technologies: ["Node.js", "Express", "MongoDB"],
+        link: "https://github.com/example/personal-blog"
     }
 ]

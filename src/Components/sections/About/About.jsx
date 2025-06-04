@@ -1,5 +1,6 @@
 import React from 'react';
 import CardSection from '@/Components/ui/CardSection';
+import TerminalBadge from '@/Components/ui/TerminalBadge';
 import {
   programmingSkills,
   frameworks,
@@ -11,38 +12,35 @@ import {
 export default function About() {
   return (
     <section className="relative bg-neutralBlack text-white py-24 px-6">
-
-
       <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16">
-        {/* Left: Profile Card */}
+        {/* Left: Terminal Badge en lugar de foto */}
         <div className="relative flex-shrink-0">
-          <div className="transform -rotate-6 hover:rotate-0 transition-transform duration-500">
-            <img
-              src="https://randomuser.me/api/portraits/men/32.jpg"
-              alt="Diego López"
-              className="w-52 h-64 md:w-64 md:h-80 object-cover rounded-3xl border-4 border-primaryMid shadow-2xl"
-            />
+          <TerminalBadge />
+          {/* Badge “Hola” opcional:
+          <div className="absolute -bottom-4 -right-8 bg-primaryStart text-neutralBlack px-3 py-1 rounded-full font-mono font-semibold shadow-lg transform rotate-12">
+            Hola!
           </div>
-          
+          */}
         </div>
 
-        {/* Right: Content Blocks */}
+        {/* Right: Bloques de contenido */}
         <div className="flex-1 space-y-12">
           {/* About Text */}
           <CardSection
             title="About Me"
             colorClass="bg-clip-text text-transparent bg-gradient-to-r from-primaryStart via-primaryMid to-primaryEnd font-mono"
           >
-            <p className="text-lg leading-relaxed mb-3 font-mono  text-gray-300">
+            <p className="text-lg leading-relaxed mb-3 font-mono text-neutralLight">
               Soy Diego López, un Fullstack Developer de Guatemala con 3 años construyendo
               aplicaciones web y móviles. Me apasiona materializar ideas en soluciones tangibles que
               mejoren procesos y experiencias de usuario.
             </p>
-            <p className="text-lg leading-relaxed font-mono  text-gray-300">
+            <p className="text-lg leading-relaxed font-mono text-neutralLight">
               Actualmente estudio Ciencias de la Computación en la UVG, donde he perfeccionado mis
-              Combino herramientas low-code como Bizagi para optimizar flujos de negocio, y potentes
-              tecnologías modernas como Kotlin, React, GraphQL, Neo4J y Rust para construir sistemas
-              escalables. Siempre busco el balance perfecto entre rendimiento, usabilidad y estética.
+              conocimientos. Combino herramientas low-code como Bizagi para optimizar flujos de
+              negocio, y potentes tecnologías modernas como Kotlin, React, GraphQL, Neo4J y Rust para
+              construir sistemas escalables. Siempre busco el balance perfecto entre rendimiento,
+              usabilidad y estética.
             </p>
           </CardSection>
 
@@ -92,7 +90,7 @@ export default function About() {
 
               {/* Metodologías */}
               <CardSection title="Metodologías" colorClass="text-primaryStart font-mono">
-                <ul className="list-disc list-inside space-y-2 text-gray-300">
+                <ul className="list-disc list-inside space-y-2 text-neutralLight">
                   {metodologias.map((m) => (
                     <li key={m}>{m}</li>
                   ))}
@@ -101,7 +99,7 @@ export default function About() {
 
               {/* Bases de Datos */}
               <CardSection title="Bases de Datos" colorClass="text-primaryMid font-mono">
-                <ul className="list-disc list-inside space-y-2 text-gray-300">
+                <ul className="list-disc list-inside space-y-2 text-neutralLight">
                   {basesDatos.map((db) => (
                     <li key={db}>{db}</li>
                   ))}
@@ -110,7 +108,7 @@ export default function About() {
 
               {/* Idiomas */}
               <CardSection title="Idiomas" colorClass="text-primaryEnd font-mono">
-                <ul className="list-disc list-inside space-y-2 text-gray-300">
+                <ul className="list-disc list-inside space-y-2 text-neutralLight">
                   {idiomas.map((idioma) => (
                     <li key={idioma.nombre}>
                       {idioma.nombre}{' '}
@@ -125,7 +123,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }

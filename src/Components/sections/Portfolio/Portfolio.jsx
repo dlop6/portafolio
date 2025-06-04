@@ -30,26 +30,40 @@ export default function Portfolio() {
         >
           <span className="text-2xl text-primaryStart">&#8592;</span>
         </button>
-        {/* Scrollable container */}
+        {/* Scrollable container (scrollbar hidden) */}
         <div
           ref={scrollContainerRef}
-          className="flex overflow-x-auto gap-8 scrollbar-thin scrollbar-thumb-primaryStart scrollbar-track-neutralBlack py-4 px-8"
-          style={{ scrollBehavior: 'smooth' }}
+          className="flex overflow-x-auto gap-8 py-4 px-8"
+          style={{
+            scrollBehavior: 'smooth',
+            scrollbarWidth: 'none', // Firefox
+            msOverflowStyle: 'none', // IE 10+
+          }}
         >
-          {projectsData.map((project, index) => (
-            <div
-              key={index}
-              className="min-w-[320px] max-w-xs flex-shrink-0 hover:scale-105 hover:shadow-2xl transition-transform duration-300"
-            >
-              <ProjectCard
-                title={project.title}
-                description={project.description}
-                src={project.image}
-                technologies={project.technologies}
-                link={project.link}
-              />
-            </div>
-          ))}
+          {/* Hide WebKit scrollbar */}
+          <style>
+            {`
+              .no-scrollbar::-webkit-scrollbar {
+                display: none;
+              }
+            `}
+          </style>
+          <div className="no-scrollbar flex gap-8">
+            {projectsData.map((project, index) => (
+              <div
+                key={index}
+                className="min-w-[320px] max-w-xs flex-shrink-0 hover:scale-105 hover:shadow-2xl transition-transform duration-300"
+              >
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  src={project.image}
+                  technologies={project.technologies}
+                  link={project.link}
+                />
+              </div>
+            ))}
+          </div>
         </div>
         {/* Right Arrow */}
         <button
