@@ -30,12 +30,12 @@ export default function About() {
             title="About Me"
             colorClass="bg-clip-text text-transparent bg-gradient-to-r from-primaryStart via-primaryMid to-primaryEnd font-mono"
           >
-            <p className="text-lg leading-relaxed mb-3 font-mono text-neutralLight">
+            <p className="text-lg leading-relaxed mb-3 font-mono text-gray-300">
               Soy Diego López, un Fullstack Developer de Guatemala con 3 años construyendo
               aplicaciones web y móviles. Me apasiona materializar ideas en soluciones tangibles que
               mejoren procesos y experiencias de usuario.
             </p>
-            <p className="text-lg leading-relaxed font-mono text-neutralLight">
+            <p className="text-lg leading-relaxed font-mono text-gray-300">
               Actualmente estudio Ciencias de la Computación en la UVG, donde he perfeccionado mis
               conocimientos. Combino herramientas low-code como Bizagi para optimizar flujos de
               negocio, y potentes tecnologías modernas como Kotlin, React, GraphQL, Neo4J y Rust para
@@ -90,7 +90,7 @@ export default function About() {
 
               {/* Metodologías */}
               <CardSection title="Metodologías" colorClass="text-primaryStart font-mono">
-                <ul className="list-disc list-inside space-y-2 text-neutralLight">
+                <ul className="list-disc list-inside space-y-2 text-gray-300">
                   {metodologias.map((m) => (
                     <li key={m}>{m}</li>
                   ))}
@@ -99,7 +99,7 @@ export default function About() {
 
               {/* Bases de Datos */}
               <CardSection title="Bases de Datos" colorClass="text-primaryMid font-mono">
-                <ul className="list-disc list-inside space-y-2 text-neutralLight">
+                <ul className="list-disc list-inside space-y-2 text-gray-300">
                   {basesDatos.map((db) => (
                     <li key={db}>{db}</li>
                   ))}
@@ -108,7 +108,7 @@ export default function About() {
 
               {/* Idiomas */}
               <CardSection title="Idiomas" colorClass="text-primaryEnd font-mono">
-                <ul className="list-disc list-inside space-y-2 text-neutralLight">
+                <ul className="list-disc list-inside space-y-2 text-gray-300">
                   {idiomas.map((idioma) => (
                     <li key={idioma.nombre}>
                       {idioma.nombre}{' '}
