@@ -47,7 +47,7 @@ export default function ContactameForm() {
           id="from_name"
           name="from_name"
           required
-          className="w-full bg-neutralLight text-neutralBlack px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primaryMid"
+          className="w-full bg-neutralLight text-neutralBlack px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primaryMid placeholder:text-gray-500"
           placeholder="Tu nombre"
         />
       </div>
@@ -61,7 +61,7 @@ export default function ContactameForm() {
           id="reply_to"
           name="reply_to"
           required
-          className="w-full bg-neutralLight text-neutralBlack px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primaryMid"
+          className="w-full bg-neutralLight text-neutralBlack px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primaryMid placeholder:text-gray-500"
           placeholder="tu@correo.com"
         />
       </div>
@@ -75,7 +75,7 @@ export default function ContactameForm() {
           name="message"
           required
           rows="5"
-          className="w-full bg-neutralLight text-neutralBlack px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primaryMid"
+          className="w-full bg-neutralLight text-neutralBlack px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-primaryMid placeholder:text-gray-500"
           placeholder="Escribe tu mensaje aquí"
         />
       </div>
@@ -85,9 +85,9 @@ export default function ContactameForm() {
         disabled={sending}
         className={`
           w-full flex justify-center items-center
-          ${sending ? 'bg-primaryMid/50 cursor-not-allowed' : 'bg-primaryStart hover:bg-primaryMid cursor-pointer'}
-          text-neutralBlack font-semibold px-6 py-2 rounded transition-colors
-          shadow-[0_0_8px_#ff8c00]
+          ${sending ? 'bg-primaryMid/50 cursor-not-allowed' : 'bg-primaryStart hover:brightness-110 cursor-pointer'}
+          text-neutralBlack font-semibold px-6 py-2 rounded transition-all
+          shadow-[0_0_8px_#ff8c00] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primaryEnd
         `}
       >
         {sending ? 'Enviando...' : 'Enviar Mensaje'}

@@ -1,6 +1,7 @@
 import React from 'react';
 import CardSection from '@/components/ui/CardSection';
 import TerminalBadge from '@/components/ui/TerminalBadge';
+import { FaCogs, FaDatabase, FaGlobeAmericas, FaUser, FaCode, FaToolbox } from 'react-icons/fa';
 import {
   programmingSkills,
   frameworks,
@@ -27,26 +28,22 @@ export default function About() {
         <div className="flex-1 space-y-12">
           {/* About Text */}
           <CardSection
-            title="About Me"
+            title={<span className="flex items-center gap-2"><FaUser className="text-primaryStart" /> About Me</span>}
             colorClass="bg-clip-text text-transparent bg-gradient-to-r from-primaryStart via-primaryMid to-primaryEnd font-mono"
           >
             <p className="text-lg leading-relaxed mb-3 font-mono text-gray-300">
-              Soy Diego López, un Fullstack Developer de Guatemala con 3 años construyendo
-              aplicaciones web y móviles. Me apasiona materializar ideas en soluciones tangibles que
-              mejoren procesos y experiencias de usuario.
+Soy Diego López, desarrollador con experiencia en proyectos personales, universitarios y profesionales. He construido soluciones full-stack de principio a fin (incluyendo seguridad, pruebas y despliegue) y también he colaborado en equipos, donde valoro la comunicación clara, el review y entregar iterando.
             </p>
             <p className="text-lg leading-relaxed font-mono text-gray-300">
-              Actualmente estudio Ciencias de la Computación en la UVG, donde he perfeccionado mis
-              conocimientos. Combino herramientas low-code como Bizagi para optimizar flujos de
-              negocio, y potentes tecnologías modernas como Kotlin, React, GraphQL, Neo4J y Rust para
-              construir sistemas escalables. Siempre busco el balance perfecto entre rendimiento,
-              usabilidad y estética.
+
+
+Me gusta combinar ingeniería práctica con buen diseño de UI. En este portafolio vas a ver productos reales, prototipos y experimentos, algunos “retro”, otros más modernos, pero todos hechos con la intención de aprender y entregar algo funcional.
             </p>
           </CardSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Programming Skills */}
-            <CardSection title="Programming Skills" colorClass="text-primaryStart font-mono">
+            <CardSection title={<span className="flex items-center gap-2"><FaCode className="text-primaryStart" /> Programming Skills</span>} colorClass="text-primaryStart font-mono">
               <div className="space-y-4">
                 {programmingSkills.map((skill) => (
                   <div key={skill.name} className="group">
@@ -75,7 +72,7 @@ export default function About() {
 
             <div className="space-y-6">
               {/* Frameworks & Tools */}
-              <CardSection title="Frameworks & Tools" colorClass="text-primaryMid font-mono">
+              <CardSection title={<span className="flex items-center gap-2"><FaToolbox className="text-primaryMid" /> Frameworks & Tools</span>} colorClass="text-primaryMid font-mono">
                 <div className="flex flex-wrap gap-3">
                   {frameworks.map((tool) => (
                     <span
@@ -89,7 +86,10 @@ export default function About() {
               </CardSection>
 
               {/* Metodologías */}
-              <CardSection title="Metodologías" colorClass="text-primaryStart font-mono">
+              <CardSection 
+                title={<span className="flex items-center gap-2"><FaCogs className="text-primaryStart" /> Metodologías</span>} 
+                colorClass="text-primaryStart font-mono"
+              >
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
                   {metodologias.map((m) => (
                     <li key={m}>{m}</li>
@@ -98,7 +98,10 @@ export default function About() {
               </CardSection>
 
               {/* Bases de Datos */}
-              <CardSection title="Bases de Datos" colorClass="text-primaryMid font-mono">
+              <CardSection 
+                title={<span className="flex items-center gap-2"><FaDatabase className="text-primaryMid" /> Bases de Datos</span>} 
+                colorClass="text-primaryMid font-mono"
+              >
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
                   {basesDatos.map((db) => (
                     <li key={db}>{db}</li>
@@ -107,7 +110,10 @@ export default function About() {
               </CardSection>
 
               {/* Idiomas */}
-              <CardSection title="Idiomas" colorClass="text-primaryEnd font-mono">
+              <CardSection 
+                title={<span className="flex items-center gap-2"><FaGlobeAmericas className="text-primaryEnd" /> Idiomas</span>} 
+                colorClass="text-primaryEnd font-mono"
+              >
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
                   {idiomas.map((idioma) => (
                     <li key={idioma.nombre}>

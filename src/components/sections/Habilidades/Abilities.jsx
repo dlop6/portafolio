@@ -1,8 +1,18 @@
 import React from 'react';
 import { abilitiesData } from '@/data/abilitiesData';
 import CardSection from '@/components/ui/CardSection';
+import { FaBox, FaServer, FaLightbulb, FaPalette, FaHandshake, FaChartBar } from 'react-icons/fa';
 
 export default function Abilities() {
+  const abilityIcons = {
+    "Producto y Entrega (End-to-End)": <FaBox />,
+    "Backend & APIs (Integraciones reales)": <FaServer />,
+    "R&D y Aprendizaje Aplicado": <FaLightbulb />,
+    "Frontend y UX Funcional": <FaPalette />,
+    "Trabajo en Equipo (PRs, revisión, comunicación)": <FaHandshake />,
+    "Datos y Modelado (SQL + pipelines)": <FaChartBar />,
+  };
+
   return (
     <section className="relative bg-neutralBlack text-primaryMid py-24 px-6 overflow-hidden">
       {/* Decorative background shapes estilo 90s */}
@@ -27,12 +37,14 @@ export default function Abilities() {
               className="bg-neutralDark rounded-2xl shadow-2xl p-8 flex flex-col items-start border border-primaryMid/40 hover:scale-105 transition-transform duration-300 group"
             >
               <div className="flex items-center mb-4">
-                <span className="inline-block w-3 h-3 rounded-full bg-primaryStart mr-3 group-hover:scale-125 transition-transform" />
+                <span className="inline-block text-2xl text-primaryStart mr-3 group-hover:scale-125 transition-transform">
+                  {abilityIcons[abilitie]}
+                </span>
                 <h3 className="text-2xl font-bold text-primaryMid group-hover:text-primaryStart transition-colors">
                   {abilitie}
                 </h3>
               </div>
-              <p className="text-gray-300 text-base leading-relaxed text-bg-primaryStart">
+              <p className="text-gray-300 text-base leading-loose text-bg-primaryStart">
                 {description}
               </p>
             </div>
