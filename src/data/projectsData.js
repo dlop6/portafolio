@@ -4,26 +4,26 @@ export const projectsData = [
     {
         title: "Finanzas Personales",
         description: "Producto full-stack para gestión financiera personal: cuentas, movimientos, deudas, presupuestos y reportes. Incluye importación bancaria y exportación de reportes.",
-        image: "public/images/finanzas personales/image copy 3.png", // TODO: add image
+        image: "/images/finanzas-personales/image copy 3.png",
         technologies: ["React", "TypeScript", "Vite", "Tailwind", "Node.js", "PostgreSQL", "Prisma", "Docker"],
-        link: "", // TODO: add link
+        link: "",
     },
     {
         title: "Autoseller (Software Privado de Gestión contable interna)",
         description: "Plataforma full-stack para gestión contable interna y de un predio de carros: cuentas/movimientos, consignaciones, cuentas por cobrar, activos y reportes.",
-        image: "public/images/autoseller/image copy 5.png", // TODO: add image
+        image: "/images/autoseller/image copy 5.png",
         technologies: ["React", "TypeScript", "Vite", "Tailwind", "Node.js", "PostgreSQL", "Prisma", "Docker"],
-        link: "https://www.canva.com/design/DAG-X-Dm9f4/7jbrykZXdPr85a7wKSjd-g/view?utm_content=DAG-X-Dm9f4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1c9371daed", // TODO: add link
+        link: "https://www.canva.com/design/DAG-X-Dm9f4/7jbrykZXdPr85a7wKSjd-g/view?utm_content=DAG-X-Dm9f4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1c9371daed",
     },
     {
         title: "ChordLab",
         description: "App web de teoría musical (armonía, escalas y práctica) construida como proyecto personal. Frontend-only, con enfoque en experiencia interactiva.",
-        image: "public/images/ChordLab/image.png", // TODO: add image
+        image: "/images/ChordLab/image.png",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind", "Zustand", "Tone.js"],
         stack: {
             details: "Next.js 14 (App Router), React, TypeScript, Tailwind CSS, Zustand, Tone.js, next-i18next (i18n EN/ES), Vercel, Google AdSense, Vitest, Playwright, ESLint"
         },
-        link: "https://chordlab-lake.vercel.app/scale", // TODO: add link
+        link: "https://chordlab-lake.vercel.app/scale",
     },
     {
         title: "Prototipo App TutorMatch",
