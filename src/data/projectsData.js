@@ -2,11 +2,11 @@
 export const projectsData = [
     // New projects added (placeholders for image/link where no public URL exists)
     {
-        title: "Finanzas Personales",
+        title: "Finanzas Personales (Software de uso interno, pronto público)",
         description: "Producto full-stack para gestión financiera personal: cuentas, movimientos, deudas, presupuestos y reportes. Incluye importación bancaria y exportación de reportes.",
         image: "/images/finanzas-personales/image copy 3.png",
         technologies: ["React", "TypeScript", "Vite", "Tailwind", "Node.js", "PostgreSQL", "Prisma", "Docker"],
-        link: "",
+        link: "https://www.canva.com/design/DAG-aJkAkX8/uwg-4uKJ8TPwJXgaJFKhmg/view?utm_content=DAG-aJkAkX8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd0867f77dd",
     },
     {
         title: "Autoseller (Software Privado de Gestión contable interna)",
