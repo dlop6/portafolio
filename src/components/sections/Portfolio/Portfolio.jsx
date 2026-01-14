@@ -1,59 +1,60 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import ProjectCard from '@/components/ui/ProjectCard';
 import { projectsData } from '@/data/projectsData';
 
 export default function Portfolio() {
-  const scrollContainerRef = React.useRef(null);
-
-  const scrollByAmount = (amount) => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: amount, behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="relative bg-neutralBlack text-white py-24 px-6">
-      <div className="container mx-auto flex flex-col items-center">
+      <div className="flex flex-col items-center mb-16">
         <h2 className="text-5xl font-extrabold uppercase text-transparent bg-clip-text bg-gradient-to-r from-primaryStart via-primaryMid to-primaryEnd font-sans relative py-2 mb-8">
           PORTAFOLIO
           <span className="absolute left-0 -bottom-2 w-32 h-1 bg-primaryStart rounded-sm underline-animate"></span>
         </h2>
       </div>
-      <div className="relative container mx-auto">
-        {/* Left Arrow */}
-        <button
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-neutralDark bg-opacity-60 rounded-full p-2 hover:bg-opacity-90 transition"
-          onClick={() => scrollByAmount(-350)}
-          aria-label="Scroll left"
-          type="button"
-        >
-          <span className="text-2xl text-primaryStart">&#8592;</span>
-        </button>
-        {/* Scrollable container (scrollbar hidden) */}
-        <div
-          ref={scrollContainerRef}
-          className="flex overflow-x-auto gap-8 py-4 px-8"
-          style={{
-            scrollBehavior: 'smooth',
-            scrollbarWidth: 'none', // Firefox
-            msOverflowStyle: 'none', // IE 10+
+      
+      <div className="w-full px-12">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={32}
+          slidesPerView={1}
+          breakpoints={{
+            640: {
+              slidesPerView: 1.2,
+            },
+            768: {
+              slidesPerView: 1.5,
+            },
+            1024: {
+              slidesPerView: 2,
+            },
+            1280: {
+              slidesPerView: 2.3,
+            },
           }}
+          navigation={{
+            nextEl: '.swiper-button-next-portfolio',
+            prevEl: '.swiper-button-prev-portfolio',
+          }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          centeredSlides={false}
+          className="portfolio-swiper"
         >
-          {/* Hide WebKit scrollbar */}
-          <style>
-            {`
-              .no-scrollbar::-webkit-scrollbar {
-                display: none;
-              }
-            `}
-          </style>
-          <div className="no-scrollbar flex gap-8">
-            {projectsData.map((project, index) => (
-              <div
-                key={index}
-                className="min-w-[320px] max-w-xs flex-shrink-0 hover:scale-105 hover:shadow-2xl transition-transform duration-300"
-              >
+          {projectsData.map((project, index) => (
+            <SwiperSlide key={index} className="flex justify-center pb-12">
+              <div className="w-full max-w-2xl hover:scale-105 transition-transform duration-300">
                 <ProjectCard
                   title={project.title}
                   description={project.description}
@@ -62,15 +63,20 @@ export default function Portfolio() {
                   link={project.link}
                 />
               </div>
-            ))}
-          </div>
-        </div>
-        {/* Right Arrow */}
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Custom Navigation Buttons */}
         <button
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-neutralDark bg-opacity-60 rounded-full p-2 hover:bg-opacity-90 transition"
-          onClick={() => scrollByAmount(350)}
-          aria-label="Scroll right"
-          type="button"
+          className="swiper-button-prev-portfolio absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-neutralDark bg-opacity-60 rounded-full p-2 hover:bg-opacity-90 transition disabled:opacity-50"
+          aria-label="Previous project"
+        >
+          <span className="text-2xl text-primaryStart">&#8592;</span>
+        </button>
+        <button
+          className="swiper-button-next-portfolio absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-neutralDark bg-opacity-60 rounded-full p-2 hover:bg-opacity-90 transition disabled:opacity-50"
+          aria-label="Next project"
         >
           <span className="text-2xl text-primaryStart">&#8594;</span>
         </button>

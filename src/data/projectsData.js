@@ -9,11 +9,11 @@ export const projectsData = [
         link: "", // TODO: add link
     },
     {
-        title: "Autoseller",
+        title: "Autoseller (Software Privado de Gestión contable interna)",
         description: "Plataforma full-stack para gestión contable interna y de un predio de carros: cuentas/movimientos, consignaciones, cuentas por cobrar, activos y reportes.",
         image: "", // TODO: add image
         technologies: ["React", "TypeScript", "Vite", "Tailwind", "Node.js", "PostgreSQL", "Prisma", "Docker"],
-        link: "", // TODO: add link
+        link: "https://www.canva.com/design/DAG-X-Dm9f4/7jbrykZXdPr85a7wKSjd-g/view?utm_content=DAG-X-Dm9f4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1c9371daed", // TODO: add link
     },
     {
         title: "ChordLab",

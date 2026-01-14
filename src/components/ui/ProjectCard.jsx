@@ -8,9 +8,9 @@ export default function ProjectCard({ title, description, src,  technologies, li
         <div className="bg-neutralDark p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             {/* Image or Placeholder */}
             {hasImage ? (
-                <img src={src} alt={title} className="w-full h-48 object-cover rounded-lg mb-4" />
+                <img src={src} alt={title} className="w-full h-72 object-cover rounded-lg mb-4" />
             ) : (
-                <div className="w-full h-48 rounded-lg mb-4 bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 flex flex-col items-center justify-center border border-primaryMid/30">
+                <div className="w-full h-72 rounded-lg mb-4 bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 flex flex-col items-center justify-center border border-primaryMid/30">
                     <span className="text-4xl mb-2 opacity-60">📦</span>
                     <span className="text-sm text-gray-400 font-mono">Próximamente</span>
                 </div>
