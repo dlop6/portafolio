@@ -32,8 +32,7 @@ export default function Home() {
           <span className="absolute left-0 -bottom-2 w-24 h-1 bg-primaryStart rounded-sm underline-animate"></span>
         </h1>
         <p className="text-lg text-textGray mb-6 drop-shadow-[0_0_3px_#ff8c00]">
-          Estudiante de Ciencias de la Computación en la UVG, apasionado por crear soluciones
-          al estilo retro que impulsen la innovación.
+          Estudiante de Ciencias de la Computación en la UVG y developer full-stack de Guatemala
         </p>
 
         {/* Description Box */}

@@ -18,7 +18,7 @@ export const projectsData = [
         title: "Sistema de Prestamo de Componentes Electrónicos",
         description: "Sistema para gestionar el préstamo de componentes electrónicos en la UVG, desarrollado con TS",
         image: "/images/componentes.png",
-        technologies: ["TypeScript", "React", "GraphQL"],
+        technologies: ["TypeScript", "React"],
         link: "https://github.com/dlop6/prestamo-componentes-electronicos"
     }
 ]
