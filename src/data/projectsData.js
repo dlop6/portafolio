@@ -28,7 +28,7 @@ export const projectsData = [
     {
         title: "Prototipo App TutorMatch",
         description: "Aplicación para conectar estudiantes con tutores, desarrollada como prototipo para un proyecto universitario.",
-        image: "/images/tutormatch.png",
+        image: "/images/tutormatch.jpg",
         technologies: ["Kotlin", "FireBase"],
         link: "https://github.com/Vann06/TutorMatch"
     },
